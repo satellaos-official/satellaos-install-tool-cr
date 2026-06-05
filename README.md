@@ -149,21 +149,32 @@ If SatellaOS performs acceptably on this system, newer hardware should provide a
 ---
 
 ## 📥 Installation
-Please follow the screenshots below in the specified order.
-Before starting, make sure you have a working Debian Netinst installation.
 
-1. ![Step 1](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step1.png)
-2. ![Step 2](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step2.png)
-3. ![Step 3](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step3.png)
-4. ![Step 4](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step4.png)
-5. ![Step 5](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step5.png)
-6. ![Step 6](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step6.png)
-7. ![Step 7](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step7.png)
-8. ![Step 8](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step8.png)
-9. ![Step 9](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step9.png)
-10. ![Step 10](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step10.png)
-11. ![Step 11](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step11.png)
-12. ![Step 12](https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step12.png)
+> ⚠️ Before starting, make sure you have a working Debian Netinst installation.
+
+<table>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step1.png" width="220"/><br/><sub>Step 1</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step2.png" width="220"/><br/><sub>Step 2</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step3.png" width="220"/><br/><sub>Step 3</sub></td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step4.png" width="220"/><br/><sub>Step 4</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step5.png" width="220"/><br/><sub>Step 5</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step6.png" width="220"/><br/><sub>Step 6</sub></td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step7.png" width="220"/><br/><sub>Step 7</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step8.png" width="220"/><br/><sub>Step 8</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step9.png" width="220"/><br/><sub>Step 9</sub></td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step10.png" width="220"/><br/><sub>Step 10</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step11.png" width="220"/><br/><sub>Step 11</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/installing-steps/step12.png" width="220"/><br/><sub>Step 12</sub></td>
+</tr>
+</table>
+
 ---
 
 # 👤 Project Status
