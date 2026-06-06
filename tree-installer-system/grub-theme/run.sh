@@ -1,11 +1,9 @@
 #!/bin/bash
-# SatellaOS GRUB2 Theme Installer
+
 ROOT_UID=0
 HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 THEME_DIR="/boot/grub/themes"
 THEME_NAME="satellaos-grub-theme-sirius"
-
-# Script'in bulunduğu dizin
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ "$UID" -eq "$ROOT_UID" ]; then
