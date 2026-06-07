@@ -15,7 +15,7 @@ if [ ! -f "$SOURCE" ]; then
     exit 1
 fi
 
-cp "$SOURCE" /etc/default/grub
+sudo cp "$SOURCE" /etc/default/grub
 
 update-grub
 

@@ -15,4 +15,4 @@ if [ ! -f "$SOURCE" ]; then
     exit 1
 fi
 
-cp "$SOURCE" /etc/network/interfaces
+sudo cp "$SOURCE" /etc/network/interfaces

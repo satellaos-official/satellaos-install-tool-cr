@@ -15,4 +15,4 @@ if [ ! -f "$SOURCE" ]; then
     exit 1
 fi
 
-cp "$SOURCE" /etc/os-release
+sudo cp "$SOURCE" /etc/os-release
