@@ -2,8 +2,17 @@
 
 echo "Cleaning The interfaces File"
 
-HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+if [ -n "$SUDO_USER" ]; then
+    REAL_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+else
+    REAL_HOME="$HOME"
+fi
 
-Base=$HOME/satellaos-install-tool-cr/tree-installer-system
+SOURCE="$REAL_HOME/satellaos-install-tool-cr/tree-installer-system/clean-network-interfaces/interfaces"
 
-sudo rsync -ahP $Base/clean-network-interfaces/interfaces /etc/network/interfaces
+if [ ! -f "$SOURCE" ]; then
+    echo "ERROR: Source file not found: $SOURCE"
+    exit 1
+fi
+
+cp "$SOURCE" /etc/network/interfaces

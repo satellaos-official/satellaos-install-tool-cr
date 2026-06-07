@@ -2,8 +2,17 @@
 
 echo "Enabling The NON-FREE Repos"
 
-HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+if [ -n "$SUDO_USER" ]; then
+    REAL_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+else
+    REAL_HOME="$HOME"
+fi
 
-Base=$HOME/satellaos-install-tool-cr/tree-installer-system
+SOURCE="$REAL_HOME/satellaos-install-tool-cr/tree-installer-system/update-apt-sources/sources.list"
 
-sudo rsync -ahP $Base/update-apt-sources/sources.list /etc/apt/sources.list
+if [ ! -f "$SOURCE" ]; then
+    echo "ERROR: Source file not found: $SOURCE"
+    exit 1
+fi
+
+cp "$SOURCE" /etc/apt/sources.list

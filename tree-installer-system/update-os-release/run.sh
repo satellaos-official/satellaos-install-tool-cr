@@ -2,8 +2,17 @@
 
 echo "Updating The os-release File"
 
-HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+if [ -n "$SUDO_USER" ]; then
+    REAL_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+else
+    REAL_HOME="$HOME"
+fi
 
-Base=$HOME/satellaos-install-tool-cr/tree-installer-system
+SOURCE="$REAL_HOME/satellaos-install-tool-cr/tree-installer-system/update-os-release/os-release"
 
-sudo rsync -ahP $Base/update-os-release/os-release /etc/os-release
+if [ ! -f "$SOURCE" ]; then
+    echo "ERROR: Source file not found: $SOURCE"
+    exit 1
+fi
+
+cp "$SOURCE" /etc/os-release

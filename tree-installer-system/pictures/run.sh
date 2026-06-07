@@ -1,9 +1,15 @@
+#!/bin/bash
+
 echo "Installing The SatellaOS Pictures"
 
-HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+if [ -n "$SUDO_USER" ]; then
+    REAL_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+else
+    REAL_HOME="$HOME"
+fi
 
-Base=/home/satella/satellaos-install-tool-cr/tree-installer-system
+Base="$REAL_HOME/satellaos-install-tool-cr/tree-installer-system"
 
-sudo mkdir -p /usr/share/satellaos-core/pictures/
+mkdir -p /usr/share/satellaos-core/pictures/
 
-sudo rsync -ahP --chmod=D755,F644 $Base/pictures/satellaos-sirius/ /usr/share/satellaos-core/pictures/
+rsync -ahP --chmod=D755,F644 "$Base/pictures/satellaos-sirius/" /usr/share/satellaos-core/pictures/

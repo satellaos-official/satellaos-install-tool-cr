@@ -2,7 +2,6 @@
 
 echo "Updating The adduser.conf File"
 
-# Resolve real user home regardless of sudo context
 if [ -n "$SUDO_USER" ]; then
     REAL_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
 else
