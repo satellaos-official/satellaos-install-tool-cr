@@ -20,7 +20,7 @@ if [[ "$choice" =~ ^[Yy]$ ]]; then
     done
 
     if [ ${#MISSING_PKGS[@]} -gt 0 ]; then
-        apt install --no-install-recommends -y "${MISSING_PKGS[@]}"
+        sudo apt install --no-install-recommends -y "${MISSING_PKGS[@]}"
     fi
 
     echo "▶ Fastfetch installed successfully."
