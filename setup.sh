@@ -4,7 +4,7 @@
 # Log System
 # =============================================================================
 
-LOG_DIR="/var/log/satellaos-install"
+LOG_DIR="$HOME/.satellaos-install/logs"
 MASTER_LOG="$LOG_DIR/install.log"
 FAILED_STEPS=()
 
