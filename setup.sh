@@ -24,7 +24,7 @@ run_step() {
     log "--------------------------------------------------------------"
     log "START  >> Step $step_num: $step_name"
 
-    if eval "$cmd" > "$step_log" 2>&1; then
+    if (set -o pipefail; eval "$cmd" 2>&1 | tee "$step_log"); then
         log "OK     >> Step $step_num: $step_name"
     else
         local exit_code=$?
