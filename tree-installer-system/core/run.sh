@@ -1,12 +1,10 @@
 #!/bin/bash
-
 # --------------------------------------------------
 # Core desktop packages and services setup
 # Provides a usable XFCE-based system
 # --------------------------------------------------
 echo "Installing core system and XFCE desktop..."
 sudo apt update
-
 sudo apt install --no-install-recommends -y \
   alsa-utils \
   dbus-x11 \
@@ -14,7 +12,7 @@ sudo apt install --no-install-recommends -y \
   gvfs-backends \
   gvfs-fuse \
   lightdm \
-  slick-greeter \
+  lightdm-gtk-greeter \
   ntfs-3g \
   orca \
   pavucontrol \
@@ -47,7 +45,7 @@ sudo apt install --no-install-recommends -y \
   xfdesktop4 \
   xfwm4 \
   xorg
-
+  
 # --------------------------------------------------
 # Fonts, themes, and visual customization
 # Cosmetic and personalization packages
