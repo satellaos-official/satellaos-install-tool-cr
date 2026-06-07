@@ -17,6 +17,6 @@ fi
 
 sudo cp "$SOURCE" /etc/default/grub
 
-update-grub
+sudo update-grub
 
-update-initramfs -u
+sudo update-initramfs -u
