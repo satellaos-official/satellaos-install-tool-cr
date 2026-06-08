@@ -26,7 +26,7 @@ CHOICES=$(whiptail --title "Program Installer" \
     "18" "Flatseal - Recommended (Flatpak)"                      OFF \
     "19" "Free Download Manager (Deb)"                           OFF \
     "20" "Galculator - Recommended (Deb)"                        OFF \
-    "21" "Gdebi Deb Installer - Recommended (Deb)"               OFF \
+    "21" "Gdebi Deb Installer               (Deb)"               OFF \
     "22" "GIMP (Deb)"                                            OFF \
     "23" "GIMP (Flatpak)"                                        OFF \
     "24" "Gnome Characters - Recommended (Deb)"                  OFF \
@@ -43,7 +43,7 @@ CHOICES=$(whiptail --title "Program Installer" \
     "35" "KeePassXC (Deb)"                                       OFF \
     "36" "Krita (Flatpak)"                                       OFF \
     "37" "Libre Office (Deb)"                                    OFF \
-    "38" "LightDM Settings (Deb)"                                OFF \
+    "38" "LightDM GTK Greeter Settings (Deb)"                    OFF \
     "39" "LocalSend (Deb)"                                       OFF \
     "40" "LocalSend (Flatpak)"                                   OFF \
     "41" "Lutris (Deb)"                                          OFF \
@@ -442,7 +442,7 @@ install_37() {
 
 # ── 38 ── LightDM Settings (Deb)
 install_38() {
-    sudo apt install -y lightdm-settings
+    sudo apt install -y lightdm-gtk-greeter-settings
 }
 
 # ── 39 ── LocalSend (Deb)
@@ -665,12 +665,12 @@ install_69() {
 
 # ── 70 ── XFCE4 Appfinder (Deb)
 install_70() {
-    sudo apt install -y xfce4-appfinder
+    sudo apt install --no-install-recommends -y xfce4-appfinder
 }
 
 # ── 71 ── XFCE4 Screenshooter (Deb)
 install_71() {
-    sudo apt install -y xfce4-screenshooter
+    sudo apt install --no-install-recommends -y xfce4-screenshooter
 }
 
 # ────────────────────────────────────────────

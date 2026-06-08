@@ -22,7 +22,6 @@ sudo apt install --no-install-recommends -y \
   udiskie \
   udisks2 \
   x11-xserver-utils \
-  xdg-desktop-portal \
   xfce4 \
   xfce4-battery-plugin \
   xfce4-clipman \

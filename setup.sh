@@ -69,19 +69,7 @@ log "=============================================================="
 log "Installing The SatellaOS System"
 log "=============================================================="
 
-Repo=$HOME/satellaos-install-tool-cr
 Base=$HOME/satellaos-install-tool-cr/tree-installer-system
-
-# Repository update
-log "--------------------------------------------------------------"
-log "Checking repository..."
-if [ -d "$Repo/.git" ]; then
-    log "Repository found, updating..."
-    git -C "$Repo" pull --rebase 2>&1 | tee -a "$MASTER_LOG"
-else
-    log "Repository not found, cloning..."
-    git clone "https://github.com/satellaos-official/satellaos-install-tool-cr.git" "$Repo" 2>&1 | tee -a "$MASTER_LOG"
-fi
 
 # =============================================================================
 # Steps
@@ -96,18 +84,20 @@ run_step "04" "wifi-translator"           "python3 $Base/wifi-translator/run.py"
 run_step "05" "clean-network-interfaces"  "bash    $Base/clean-network-interfaces/run.sh"
 run_step "06" "update-apt-sources"        "bash    $Base/update-apt-sources/run.sh"
 run_step "07" "core"                      "bash    $Base/core/run.sh"
-run_step "08" "update-os-release"         "bash    $Base/update-os-release/run.sh"
-run_step "09" "silent-kernel"             "bash    $Base/silent-kernel/run.sh"
-run_step "10" "grub-settings"             "bash    $Base/grub-settings/run.sh"
-run_step "11" "grub-theme"                "bash    $Base/grub-theme/run.sh"
-run_step "12" "lightdm-settings"          "bash    $Base/lightdm-settings/run.sh"
-run_step "13" "user-settings"             "bash    $Base/user-configuration-settings/run.sh"
-run_step "14" "skel-settings"             "bash    $Base/skel-configuration-settings/run.sh"
-run_step "15" "pictures"                  "bash    $Base/pictures/run.sh"
-run_step "16" "themes"                    "bash    $Base/themes/run.sh"
-run_step "17" "fastfetch"                 "bash    $Base/fastfetch/run.sh"
-run_step "18" "uca-creator"               "bash    $Base/uca-creator/run.sh"
-run_step "19" "driver-creator"            "bash    $Base/driver-installer/run.sh"
-run_step "20" "program-installer"         "bash    $Base/program-installer/run.sh"
+run_step "08" "flatpak"                   "bash    $Base/flatpak/run.sh"
+run_step "09" "update-os-release"         "bash    $Base/update-os-release/run.sh"
+run_step "10" "silent-kernel"             "bash    $Base/silent-kernel/run.sh"
+run_step "11" "grub-settings"             "bash    $Base/grub-settings/run.sh"
+run_step "12" "grub-theme"                "bash    $Base/grub-theme/run.sh"
+run_step "13" "lightdm-settings"          "bash    $Base/lightdm-settings/run.sh"
+run_step "14" "user-settings"             "bash    $Base/user-configuration-settings/run.sh"
+run_step "15" "skel-settings"             "bash    $Base/skel-configuration-settings/run.sh"
+run_step "16" "bashrc-changer"            "bash    $Base/bashrc-changer/run.sh"
+run_step "17" "pictures"                  "bash    $Base/pictures/run.sh"
+run_step "18" "themes"                    "bash    $Base/themes/run.sh"
+run_step "19" "fastfetch"                 "bash    $Base/fastfetch/run.sh"
+run_step "20" "uca-creator"               "bash    $Base/uca-creator/run.sh"
+run_step "21" "driver-creator"            "bash    $Base/driver-installer/run.sh"
+run_step "22" "program-installer"         "bash    $Base/program-installer/run.sh"
 
 print_summary
