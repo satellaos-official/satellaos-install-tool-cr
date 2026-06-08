@@ -16,5 +16,3 @@ if [ ! -d "$SOURCE_DIR" ]; then
 fi
 
 sudo cp "$SOURCE_DIR"/* /etc/lightdm/
-
-sudo systemctl restart lightdm
