@@ -139,12 +139,19 @@ If SatellaOS performs acceptably on this system, newer hardware should provide a
 
 ## 🖼️ Screenshots
 
-| Screenshot | Description      |
-| ---------- | ---------------- |
-| Link1      | Desktop Overview |
-| Link2      | Application Menu |
-| Link3      | File Manager     |
-| Link4      | System Utilities |
+<table>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/screenshots/grub.png" width="220"/><br/><sub>GRUB</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/screenshots/lightdm-gtk-greeter.png" width="220"/><br/><sub>LightDM GTK Greeter</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/screenshots/main-screen.png" width="220"/><br/><sub>Main Screen</sub></td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/screenshots/whisker-menu.png" width="220"/><br/><sub>Whisker Menu</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/screenshots/htop.png" width="220"/><br/><sub>Htop</sub></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/satellaos-official/satellaos-install-tool-cr/main/main-repo-pictures/screenshots/fastfetch.png" width="220"/><sub>Fastfetch</sub></td>
+</tr>
+</table>
+
 
 ---
 
