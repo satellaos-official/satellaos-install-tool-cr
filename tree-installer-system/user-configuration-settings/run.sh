@@ -8,9 +8,11 @@ echo "Restoring XFCE configuration and autostart settings..."
 
 # ── XFCE and Autostart ──────────────────────────────────────────────────────────────────
 
-cp -r "$BASE/" "$HOME/.config/xfce4/"
+mkdir -p "$HOME/.config/"
 
-cp -r "$BASE/" "$HOME/.config/autostart/"
+cp -r "$BASE/"* "$HOME/.config/"
+
+cp -r "$BASE/"* "$HOME/.config/"
 
 rm -rf $HOME/.bashrc
 
