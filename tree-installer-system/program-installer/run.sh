@@ -3,13 +3,7 @@
 set -e
 set -u
 
-if ! command -v whiptail &>/dev/null; then
-    sudo apt install -y whiptail
-fi
-
-VERSION="5.3.0"
-
-CHOICES=$(whiptail --title "SatellaOS Installer v$VERSION" \
+CHOICES=$(whiptail --title "Program Installer" \
     --checklist "Select the programs you want to install:\n(SPACE to mark, ENTER to confirm, TAB to switch between OK/Cancel)" \
     40 70 30 \
     "1"  "Brave Browser (Deb)"                                   OFF \
@@ -107,7 +101,7 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
-PKG_DIR=$(mktemp -d /tmp/satellaos-install-tool-XXXXXX)
+PKG_DIR=$(mktemp -d /tmp/satellaos-install-tool-cr-XXXXXX)
 trap 'rm -rf "$PKG_DIR"' EXIT
 
 # ── 1 ── Brave Browser

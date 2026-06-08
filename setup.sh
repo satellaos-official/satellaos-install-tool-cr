@@ -106,7 +106,8 @@ run_step "14" "skel-settings"             "bash    $Base/skel-configuration-sett
 run_step "15" "pictures"                  "bash    $Base/pictures/run.sh"
 run_step "16" "themes"                    "bash    $Base/themes/run.sh"
 run_step "17" "fastfetch"                 "bash    $Base/fastfetch/run.sh"
-run_step "18" "uca-creator"               "bash    $Base/uca-creator/run.sh --cli"
-run_step "19" "program-installer"         "bash    $Base/program-installer/run-temp.sh"
+run_step "18" "uca-creator"               "bash    $Base/uca-creator/run.sh"
+run_step "19" "driver-creator"            "bash    $Base/driver-installer/run.sh"
+run_step "20" "program-installer"         "bash    $Base/program-installer/run.sh"
 
 print_summary
