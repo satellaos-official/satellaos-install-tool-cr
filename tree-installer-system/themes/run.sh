@@ -22,7 +22,7 @@ fi
 
 wget -q -O "/tmp/papirus-color-manager.py" "https://raw.githubusercontent.com/satellaos-official/satellaos-packages/refs/heads/main/satellaos-tools/satellaos-papirus-color-manager/core/papirus-color-manager.py"
 
-python3 "/tmp/papirus-color-manager.py" --color violet
+python3 "/tmp/papirus-color-manager.py" --m --color violet
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
