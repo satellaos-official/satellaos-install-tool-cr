@@ -6,7 +6,9 @@ BASE="$HOME/satellaos-install-tool-cr/tree-installer-system/user-configuration-s
 
 echo "Restoring XFCE configuration and autostart settings..."
 
-# ── XFCE and Autostart ──────────────────────────────────────────────────────────────────
+# ============================================================
+# XFCE and Autostart
+# ============================================================
 
 mkdir -p "$HOME/.config/"
 
@@ -15,7 +17,5 @@ cp -r "$BASE/"* "$HOME/.config/"
 cp -r "$BASE/"* "$HOME/.config/"
 
 rm -rf $HOME/.bashrc
-
-# ────────────────────────────────────────────────────────────────────────────────────────
 
 echo "Restore of XFCE configuration and autostart settings is complete."

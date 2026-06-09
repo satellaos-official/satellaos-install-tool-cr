@@ -18,8 +18,7 @@ CHOICES=$(whiptail --title "Driver Installer" \
     "4" "VirtualBox Graphics Driver"  OFF \
     "5" "ADB Driver"                  OFF \
     "6" "Bluetooth Modules"           OFF \
-    "7" "Touchpad tap-to-click"       OFF \
-    "8" "QEMU Guest Agent & SPICE QXL"    OFF \
+    "7" "QEMU Guest Agent & SPICE QXL"    OFF \
     3>&1 1>&2 2>&3) || { exit 0; }
 
 # Remove quotes and duplicates
@@ -29,9 +28,9 @@ if [[ -z "$SELECTIONS" ]]; then
     exit 0
 fi
 
-# ──────────────────────────────────────────────
+# ==============================================
 # 1) AMD Graphics Driver
-# ──────────────────────────────────────────────
+# ==============================================
 install_1() {
     sudo apt update && sudo apt upgrade -y
     sudo apt install -y \
@@ -41,9 +40,9 @@ install_1() {
         mesa-vdpau-drivers
 }
 
-# ──────────────────────────────────────────────
+# ==============================================
 # 2) Intel Graphics Driver
-# ──────────────────────────────────────────────
+# ==============================================
 install_2() {
     sudo apt update
     sudo apt install -y \
@@ -55,17 +54,17 @@ install_2() {
         mesa-vdpau-drivers
 }
 
-# ──────────────────────────────────────────────
+# ==============================================
 # 3) VMware Graphics Driver
-# ──────────────────────────────────────────────
+# ==============================================
 install_3() {
     sudo apt update
     sudo apt install -y open-vm-tools open-vm-tools-desktop
 }
 
-# ──────────────────────────────────────────────
+# ==============================================
 # 4) VirtualBox Guest Additions
-# ──────────────────────────────────────────────
+# ==============================================
 install_4() {
     local BASE_URL="https://download.virtualbox.org/virtualbox"
     local MOUNT_DIR="/tmp/vbox-guest-additions"
@@ -101,9 +100,9 @@ install_4() {
     sudo sh "${MOUNT_DIR}/VBoxLinuxAdditions.run" || return 1
 }
 
-# ──────────────────────────────────────────────
+# ==============================================
 # 5) ADB Driver
-# ──────────────────────────────────────────────
+# ==============================================
 install_5() {
     sudo apt update
     sudo apt install --no-install-recommends -y \
@@ -112,9 +111,9 @@ install_5() {
         jmtpfs
 }
 
-# ──────────────────────────────────────────────
+# ==============================================
 # 6) Bluetooth Modules
-# ──────────────────────────────────────────────
+# ==============================================
 install_6() {
     sudo apt update
     sudo apt install -y bluetooth bluez blueman
@@ -122,26 +121,10 @@ install_6() {
     sudo systemctl start bluetooth
 }
 
-# ──────────────────────────────────────────────
-# 7) Touchpad tap-to-click
-# ──────────────────────────────────────────────
+# ==============================================
+# 7) QEMU Guest Agent & SPICE QXL
+# ==============================================
 install_7() {
-    sudo mkdir -p /etc/X11/xorg.conf.d
-    sudo tee /etc/X11/xorg.conf.d/40-libinput.conf > /dev/null <<EOF
-Section "InputClass"
-  Identifier "libinput touchpad catchall"
-  MatchIsTouchpad "on"
-  MatchDevicePath "/dev/input/event*"
-  Driver "libinput"
-  Option "Tapping" "on"
-EndSection
-EOF
-}
-
-# ──────────────────────────────────────────────
-# 8) QEMU Guest Agent & SPICE QXL
-# ──────────────────────────────────────────────
-install_8() {
     sudo apt update
     sudo apt install -y \
         qemu-guest-agent \
@@ -162,9 +145,9 @@ EndSection
 EOF
 }
 
-# ──────────────────────────────────────────────
+# ==============================================
 # Run selected items
-# ──────────────────────────────────────────────
+# ==============================================
 TOTAL=$(echo "$SELECTIONS" | wc -w)
 CURRENT=0
 

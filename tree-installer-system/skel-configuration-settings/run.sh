@@ -6,10 +6,10 @@ Base="$HOME/satellaos-install-tool-cr/tree-installer-system/skel-configuration-s
 
 echo "Restoring /etc/skel directory..."
 
-# ── /etc/skel ───────────────────────────────────────────────────────────────────────────
+# ============================================================
+# /etc/skel
+# ============================================================
 
 sudo cp -r "$Base"/. /etc/skel/
-
-# ────────────────────────────────────────────────────────────────────────────────────────
 
 echo "Restore of /etc/skel directory is complete."

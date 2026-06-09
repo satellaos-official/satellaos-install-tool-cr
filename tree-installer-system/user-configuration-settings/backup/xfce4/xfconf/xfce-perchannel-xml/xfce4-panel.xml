@@ -48,16 +48,14 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="“wired connection 1” ethernet ağ bağlantısı etkin"/>
       </property>
       <property name="icon-size" type="int" value="24"/>
       <property name="known-items" type="array">
       </property>
-      <property name="hide-new-items" type="bool" value="true"/>
+      <property name="hide-new-items" type="bool" value="false"/>
       <property name="hidden-items" type="array">
       </property>
       <property name="hidden-legacy-items" type="array">
-        <value type="string" value="“wired connection 1” ethernet ağ bağlantısı etkin"/>
       </property>
     </property>
     <property name="plugin-7" type="string" value="separator">
@@ -76,14 +74,6 @@
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="button-icon" type="string" value="/usr/share/satellaos-core/pictures/logo/svg/satellaos.svg"/>
       <property name="recent" type="array">
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce-session-settings.desktop"/>
-        <value type="string" value="xfce4-terminal-settings.desktop"/>
-        <value type="string" value="org.localsend.localsend_app.desktop"/>
-        <value type="string" value="xfce4-screensaver-preferences.desktop"/>
-        <value type="string" value="firefox-esr.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
-        <value type="string" value="lightdm-gtk-greeter-settings.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>

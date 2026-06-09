@@ -26,7 +26,7 @@ CHOICES=$(whiptail --title "Program Installer" \
     "18" "Flatseal - Recommended (Flatpak)"                      OFF \
     "19" "Free Download Manager (Deb)"                           OFF \
     "20" "Galculator - Recommended (Deb)"                        OFF \
-    "21" "Gdebi Deb Installer               (Deb)"               OFF \
+    "21" "Gdebi Deb Installer (Deb)"                             OFF \
     "22" "GIMP (Deb)"                                            OFF \
     "23" "GIMP (Flatpak)"                                        OFF \
     "24" "Gnome Characters - Recommended (Deb)"                  OFF \
