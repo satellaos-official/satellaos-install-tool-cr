@@ -15,4 +15,6 @@ cp -r "$HOME/.config/xfce4/" "$BASE/"
 
 cp -r "$HOME/.config/autostart/" "$BASE/"
 
+cp "$HOME/.bashrc" "$BASE/.bashrc"
+
 echo "Backup of XFCE configuration and autostart settings is complete."

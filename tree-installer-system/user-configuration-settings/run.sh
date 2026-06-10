@@ -16,6 +16,6 @@ cp -r "$BASE/"* "$HOME/.config/"
 
 cp -r "$BASE/"* "$HOME/.config/"
 
-rm -rf $HOME/.bashrc
+cp "$BASE/.bashrc" "$HOME/.bashrc"
 
 echo "Restore of XFCE configuration and autostart settings is complete."

@@ -1,6 +1,6 @@
-# /etc/bash.bashrc — SatellaOS system-wide
+# ~/.bashrc: executed by bash(1) for non-login shells.
 
-# Non-interactive shells exit early
+# If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
@@ -14,11 +14,7 @@ HISTFILESIZE=2000
 
 # ── General shell options ─────────────────────────────────────────────────────
 shopt -s checkwinsize
-
-# ── Debian chroot ─────────────────────────────────────────────────────────────
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
+#shopt -s globstar
 
 # ── Color support ─────────────────────────────────────────────────────────────
 if [ -x /usr/bin/tput ] && tput setaf 1 &>/dev/null; then
@@ -58,13 +54,13 @@ else
 fi
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
-PS1="${C1}┌──${debian_chroot:+(${debian_chroot})──}${VIRTUAL_ENV:+(${RESET}\[\033[0;1m\]\$(basename \$VIRTUAL_ENV)${C1})}(${C2}${PROMPT_ID}${C1})-[\[\033[0;1m\]\w${C1}]
+PS1="${C1}┌──${VIRTUAL_ENV:+(${RESET}\[\033[0;1m\]\$(basename \$VIRTUAL_ENV)${C1})}(${C2}${PROMPT_ID}${C1})-[\[\033[0;1m\]\w${C1}]
 ${C1}└─${C2}\$${RESET} "
 
 [ "$NEWLINE_BEFORE_PROMPT" = yes ] && PROMPT_COMMAND="PROMPT_COMMAND=echo"
 
 # ── xterm title bar ───────────────────────────────────────────────────────────
-[[ "$TERM" == xterm* ]] && PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+[[ "$TERM" == xterm* ]] && PS1="\[\e]0;\u@\h: \w\a\]$PS1"
 
 # ── Color support: ls, less, man ──────────────────────────────────────────────
 if [ -x /usr/bin/dircolors ]; then
@@ -105,7 +101,7 @@ if ! shopt -oq posix; then
     fi
 fi
 
-# ── SatellaOS system-wide settings ───────────────────────────────────────────
+# ── PATH & input method ───────────────────────────────────────────────────────
 export PATH=$PATH:/sbin:/usr/sbin
 export GTK_IM_MODULE=uim
 export QT_IM_MODULE=uim
@@ -116,21 +112,5 @@ if [ "$IN_CONTAINER" -eq 1 ]; then
     echo -ne "\033]0;${PROMPT_ID}\007"
 fi
 
-# ── Fastfetch Setting ─────────────────────────────────────────────────────────
+# ── Fastfetch ─────────────────────────────────────────────────────────────────
 alias fastfetch='fastfetch --logo-color-1 "38;2;127;63;191" --logo /usr/share/satellaos-core/pictures/ascii-art/satellaos.asc'
-
-# ── Command not found handler ─────────────────────────────────────────────────
-if [ -x /usr/lib/command-not-found ] || [ -x /usr/share/command-not-found/command-not-found ]; then
-    command_not_found_handle() {
-        if [ -x /usr/lib/command-not-found ]; then
-            /usr/lib/command-not-found -- "$1"
-            return $?
-        elif [ -x /usr/share/command-not-found/command-not-found ]; then
-            /usr/share/command-not-found/command-not-found -- "$1"
-            return $?
-        else
-            printf "%s: command not found\n" "$1" >&2
-            return 127
-        fi
-    }
-fi
