@@ -155,6 +155,16 @@ If SatellaOS performs acceptably on this system, newer hardware should provide a
 
 ---
 
+### 📚 GitHub Guide
+
+If you experience problems while uploading projects to GitHub, configuring Git, or pushing commits, please refer to the following guide:
+
+**LINK**
+
+The guide includes step-by-step instructions for repository creation, authentication, branch management, and common troubleshooting procedures.
+
+---
+
 ## 📥 Installation
 
 > ⚠️ Before starting, make sure you have a working Debian Netinst installation.
@@ -204,3 +214,11 @@ The core principles of the project are:
 * Modern Appearance
 
 SatellaOS aims to stay out of the user's way and let them build the system they want.
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, distribute, and redistribute the software, provided that the original copyright notice and license text are included.
+
+For more information, see the `LICENSE` file included in this repository.
