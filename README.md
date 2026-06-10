@@ -159,7 +159,7 @@ If SatellaOS performs acceptably on this system, newer hardware should provide a
 
 If you experience problems while uploading projects to GitHub, configuring Git, or pushing commits, please refer to the following guide:
 
-**LINK**
+**https://github.com/satellaos-official/satellaos-install-tool-cr/blob/main/git-user-manual/README.md**
 
 The guide includes step-by-step instructions for repository creation, authentication, branch management, and common troubleshooting procedures.
 
